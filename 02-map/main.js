@@ -59,11 +59,11 @@ function createStringArray(array,properties){
 }
 function createArrayOrArray(array,properties,returntype)
 {
+    let tmpArr=[];
     return array.map(function(el){
         
         return properties.forEach(function(innerEl){
-            console.log(el[innerEl])
-            return el[innerEl];
+             return el[innerEl];
         })
 
     })
