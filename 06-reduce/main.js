@@ -16,19 +16,17 @@ const sommefruit=fruitBasket.reduce(function(panier,item){
 console.log(sommefruit);
 
 
-const parenthese="(())";
+const parenthese=")(";
 function countParenthesis(parenthese){
-    const arrparenthese=parenthese.split('');
-    return arrparenthese.reduce(function(somme,item){
+    
+    const result=  parenthese.split('').reduce(function(somme,item){
         
         somme[item]=(somme[item] || 0)+1;
         return somme;
-    },[]).forEach(function(){
-        console.log(el);
-    });
-
-   
-    
+    },[])
+    return result['(']===result[')'];
+ 
 }
+
 console.log(countParenthesis(parenthese));
 
