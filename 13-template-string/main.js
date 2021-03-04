@@ -137,9 +137,8 @@ function addAbbreviations(strings, ...value){
     // console.log(trouve)
     debugger
     let str="";
-    strings.forEach(function(item,idx){
-        
-        str+=` ${item} 
+    strings.forEach((item,idx) =>{ 
+        str+=` ${item}
             ${value.some((el) => el ===dict[value[idx]]) ? `<abbr title="${dict[value[idx]]}">${value[idx]}</abbr>`: `${(value[idx] || '')}`}
         `
    })
@@ -149,3 +148,4 @@ const first = 'Wes';
 const last = 'Bos';
 const sentence = addAbbreviations`Hello my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'} and ${'JS'}`;
 document.getElementById('demo').innerHTML=sentence;
+
