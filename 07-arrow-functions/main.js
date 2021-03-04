@@ -18,7 +18,8 @@ const arr3=arr.map(item =>{
 console.log(arr3);
 // Lorsqu'on a un seul paramètre, on peut le sortir des paranthèses
 // Lorqu'on a en même temps un seul return, on peut l'ignorer
-const arr4=arr.map(item =>({item + "Jean Pierre"}));
+// Il faut aussi retirer les accolades
+const arr4=arr.map(item =>item + "Jean Pierre");
 console.log(arr4);
 
 
