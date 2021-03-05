@@ -135,11 +135,11 @@ const dict={
 function addAbbreviations(strings, ...value){
     // const trouve=value.some((el) => el ==='toto')
     // console.log(trouve)
-    debugger
+    //debugger
     let str="";
     strings.forEach((item,idx) =>{ 
         str+=` ${item}
-            ${value.some((el) => el ===dict[value[idx]]) ? `<abbr title="${dict[value[idx]]}">${value[idx]}</abbr>`: `${(value[idx] || '')}`}
+            ${dict[value[idx]] ? `<abbr title="${dict[value[idx]]}">${value[idx]}</abbr>`: `${(value[idx] || '')}`}
         `
    })
    return str
@@ -147,5 +147,7 @@ function addAbbreviations(strings, ...value){
 const first = 'Wes';
 const last = 'Bos';
 const sentence = addAbbreviations`Hello my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'} and ${'JS'}`;
+
+console.log
 document.getElementById('demo').innerHTML=sentence;
 
