@@ -35,3 +35,39 @@ console.log(website,instagram);
 //exo-3 Destructuration
 const{firstname:fn,street,city,country}=user.adress;
 console.log(firstname,street,city,country);
+//exo-4
+const recettes = [
+    {
+    id: 1,
+    name: "Tiramisu",
+    difficulty: 2,
+    ingredients: ["amaretto", "mascarpone", "sucre", "boudoir", "café", "cacao"]
+    },
+    {
+    id: 2,
+    name: "Tartiflette",
+    difficulty: 2,
+    ingredients: ["lardons", "reblochon", "pommes de terre", "oignons"]
+    },
+    {
+    id: 3,
+    name: "Pâtes bolo",
+    difficulty: 3,
+    ingredients: ["spaghettis", "tomates", "oignons", "gruyère râpé", "viande hâchée"]
+    },
+    {
+    id: 4,
+    name: "Donus fourré crème anglaise avec nappage chocolat guanduja",
+    difficulty: 5,
+    ingredients: ["farine", "sucre", "oeufs", "levure", "chocolat"]
+    },
+   ]
+   
+  const shoppingListe = recettes.reduce(function(arr,el){
+      
+      el.difficulty===2? arr.push(...el.ingredients):''
+      return arr
+  },[])
+  
+  console.log(shoppingListe)
+
